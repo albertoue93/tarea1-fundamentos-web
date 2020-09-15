@@ -1,7 +1,7 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 
-class Hola extends Component{
-    render(){
+class Hola extends Component {
+    render() {
         return(
             <h1>Hola Mundo</h1>
         );

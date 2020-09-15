@@ -1,25 +1,14 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react';
 
-class Counter extends Component{
-    constructor(props){
-        super(props)
+function Counter() {
+    const[count, setCount] = useState(0);
 
-        this.state = {count: 0}
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick(){
-        this.setState({count: this.state.count + 1})
-    }
-
-    render(){
-        return(
+    return(
         <>
-            <p>Has Clickeado {this.state.count} veces</p>
-            <button onClick={this.handleClick}>Dar Click</button>
+        <p>Haz Clickeado {count} veces</p>
+        <button onClick={() => setCount(count + 1)}>Dar Click</button>
         </>
-        );
-    }
+    );
 }
 
-export default Counter
+export default Counter;
